@@ -1,0 +1,720 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    width: 94%;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff7f50;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 0.2rem;
+}
+
+nav ul li a:hover {
+    color: #ff7f50;
+    border-bottom: 2px solid #ff7f50;
+}
+
+
+
+.cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+}
+
+.hero-details {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.detail {
+    margin: 0 1.5rem;
+    text-align: center;
+}
+
+.detail img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+}
+
+.detail p {
+    font-size: 1.1rem;
+    color: white;
+}
+
+#collection {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+#collection h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.product {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.product .price {
+    font-size: 1.2rem;
+    color: #ff7f50;
+}
+
+#about {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+#about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+#contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contact .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#contact button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-details {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #555;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 1rem;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #ff7f50;
+}
+
+
+#brands {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+#brands h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.brand-slider {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.brand-item {
+    display: inline-block;
+    margin: 0 1rem;
+    transition: transform 0.3s ease;
+}
+
+.brand-item img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.brand-item:hover {
+    transform: scale(1.1);
+}
+
+.hero {
+    height: 100vh;
+    background: url('images/bg-1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+}
+
+.hero-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.hero-details .detail {
+    text-align: center;
+}
+
+.hero-details .detail img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.hero-details .detail p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    position: relative;
+    background-image: url('path/to/your/image.jpg'); /* Replace with the path to your background image */
+    background-size: cover; /* Ensure the background covers the entire hero section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hero .cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1rem;
+}
+
+.hero .cta-button:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+}
+
+.hero-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.hero-details .detail {
+    text-align: center;
+}
+
+.hero-details .detail img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.hero-details .detail p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+#collection {
+    padding: 4rem 2rem;
+    background-color: #f8f8f8;
+    text-align: center;
+    background-image: url('path/to/another/background-image.jpg'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#collection h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: calc(33.333% - 2rem); /* Adjust for spacing */
+    box-sizing: border-box;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.product .price {
+    font-size: 1.2rem;
+    color: #ff7f50;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+#brands {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+    background-image: url('path/to/another/background-image.jpg'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#brands h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.brand-slider {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.brand-item {
+    display: inline-block;
+    margin: 0 1rem;
+    transition: transform 0.3s ease;
+}
+
+.brand-item img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.brand-item:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+.footer-details {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #555;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 1rem;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #ff7f50;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+/* Newsletter Subscription Section */
+#newsletter {
+    padding: 4rem 2rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+#newsletter h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#newsletter p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ddd;
+}
+
+#newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#newsletter input[type="email"] {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#newsletter input[type="email"]:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on focus */
+    transform: scale(1.02); /* Slight scale up on focus */
+}
+
+#newsletter button {
+    padding: 1rem 2rem;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#newsletter button:hover {
+    background-color: #ff6347;
+    transform: scale(1.05); /* Slight scale up on hover */
+}
+/* Brands Section */
+/* Brands Section */
+#brands {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+#brands h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.brand-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.brand-track {
+    display: flex;
+    align-items: center; /* Align items center to ensure they are on the same line */
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.brand-item {
+    flex: 0 0 auto;
+    margin: 0 1rem;
+}
+
+.brand-item img {
+    height: 60px; /* Set a consistent height for all brand images */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
